@@ -1,0 +1,48 @@
+{
+  "name": "news-explorer-api",
+  "version": "1.0.0",
+  "description": "rest api for a news site",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prnmxm/news-explorer-api.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "joi",
+    "celebrate",
+    "mongo"
+  ],
+  "author": "prnmxm <prnmxm@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prnmxm/news-explorer-api/issues"
+  },
+  "homepage": "https://github.com/prnmxm/news-explorer-api#readme",
+  "devDependencies": {
+    "eslint": "7.3.1",
+    "eslint-config-airbnb-base": "14.2.0",
+    "eslint-plugin-import": "2.21.2",
+    "nodemon": "2.0.4"
+  },
+  "dependencies": {
+    "bcrypt": "5.0.0",
+    "body-parser": "1.19.0",
+    "celebrate": "12.1.1",
+    "cookie-parser": "1.4.5",
+    "dotenv": "8.2.0",
+    "express": "4.17.1",
+    "express-rate-limit": "5.1.3",
+    "express-winston": "4.0.3",
+    "helmet": "3.23.3",
+    "jsonwebtoken": "8.5.1",
+    "mongoose": "5.9.20",
+    "validator": "13.1.1",
+    "winston": "3.3.3"
+  }
+}
