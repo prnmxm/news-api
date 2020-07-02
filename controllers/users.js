@@ -35,7 +35,7 @@ module.exports.signIn = async (req, res, next) => {
       httpOnly: true,
       sameSite: true,
     });
-    res.status(200).send(user.passwordPrivate());
+    res.status(200).end();
   } catch (e) {
     next(e);
   }
