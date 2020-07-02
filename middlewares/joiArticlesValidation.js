@@ -73,7 +73,9 @@ const getNewsValidation = celebrate({
 
 const removeNewsValidation = celebrate({
   params: Joi.object().keys({
-    articleId: Joi.string().alphanum().length(24),
+    articleId: Joi.string().alphanum().length(24).messages({
+      'string.length': errors.INVALID_ID,
+    }),
   }),
   ...headers,
 }, celebrateOptions);

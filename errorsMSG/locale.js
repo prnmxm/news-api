@@ -14,6 +14,7 @@ const locale = {
     SERVERERROR: 'Ошибка сервера',
     EMPTY_FIELD: 'Поле не должно быть пустым',
     NOT_STRING: 'Поле должно быть строкой',
+    INVALID_ID: 'Некорректный ид',
   },
 };
 module.exports = locale;
