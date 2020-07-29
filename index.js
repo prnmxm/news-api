@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors')
 
 const app = express();
 const helmet = require('helmet');
@@ -16,7 +17,15 @@ const mongoUri = config.MONGODB;
 mongoose.connect(mongoUri, {
   useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true,
 });
-
+const corsOptions = {
+  origin:['https://news.prnmxm.xyz/','http://localhost:8080', 'https://prnmxm.xyz/', 'https://prnmxm.github.io/news-js/'],
+  methods:['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+  preflightContinue: false,
+  optionsSuccessStatus: 204,
+  allowedHeaders:['Content-Type', 'x-requested-with', 'origin', 'accept', 'x-access-token', 'Authorization'],
+  credentials: true
+};
+app.use(cors(corsOptions))
 app.use(helmet());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: false }));
