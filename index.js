@@ -18,14 +18,14 @@ mongoose.connect(mongoUri, {
 });
 
 const corsOptions = {
-  origin: ['https://prnmxm.github.io', 'http://localhost:8080', 'https://prnmxm.xyz'],
+  origin: ['https://prnmxm.github.io', 'http://localhost', 'https://prnmxm.xyz'],
   methods:['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
   preflightContinue: false,
   optionsSuccessStatus: 204,
   allowedHeaders:['Content-Type', 'x-requested-with', 'origin', 'accept', 'x-access-token', 'Authorization'],
   credentials: true
 };
-app.use(cors(corsOptions))
+app.use('*',cors(corsOptions))
 app.use(helmet());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: false }));
