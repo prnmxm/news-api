@@ -18,7 +18,7 @@ mongoose.connect(mongoUri, {
 });
 
 const corsOptions = {
-  origin: ['https://prnmxm.github.io', 'http://localhost', 'https://prnmxm.xyz'],
+  origin: ['https://prnmxm.github.io', 'http://localhost', 'https://prnmxm.xyz','http://localhost:8080'],
   methods:['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
   preflightContinue: false,
   optionsSuccessStatus: 204,
