@@ -1,6 +1,5 @@
 const express = require('express');
 const cors = require('cors')
-
 const app = express();
 const helmet = require('helmet');
 const cookieParser = require('cookie-parser');
@@ -17,6 +16,7 @@ const mongoUri = config.MONGODB;
 mongoose.connect(mongoUri, {
   useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true,
 });
+
 const corsOptions = {
   origin:['https://news.prnmxm.xyz/','http://localhost:8080', 'https://prnmxm.xyz/', 'https://prnmxm.github.io/news-js/', 'https://prnmxm.github.io/', 'https://prnmxm.github.io'],
   methods:['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],

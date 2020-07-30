@@ -35,7 +35,7 @@ module.exports.signIn = async (req, res, next) => {
       httpOnly: true,
       sameSite: true,
     });
-    res.status(200).end();
+    res.status(200).send(user.passwordPrivate());
   } catch (e) {
     next(e);
   }
@@ -46,6 +46,14 @@ module.exports.profile = async (req, res, next) => {
     const user = await User.findById(userId).orFail(new NotFound(errors.NOT_FOUND));
     if (!user) throw new NotFound(errors.NOT_FOUND);
     res.status(200).send(user.passwordPrivate());
+  } catch (e) {
+    next(e);
+  }
+};
+module.exports.logout = async (req, res, next) => {
+  try {
+    res.clearCookie('jwt');
+    res.status(200).send();
   } catch (e) {
     next(e);
   }

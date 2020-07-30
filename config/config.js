@@ -10,3 +10,4 @@ const config = {
   JWT_SECRET: NODE_ENV === 'production' ? JWT_SECRET : 'develop_secret',
 };
 module.exports = config;
+ 

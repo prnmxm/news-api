@@ -14,6 +14,5 @@ const errors = {
   EMPTY_FIELD: 'EMPTY_FIELD',
   NOT_STRING: 'NOT_STRING',
   CONFLICT_EMAIL: 'CONFLICT_EMAIL',
-  INVALID_ID: 'INVALID_ID',
 };
 module.exports = errors;
