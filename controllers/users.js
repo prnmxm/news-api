@@ -33,7 +33,6 @@ module.exports.signIn = async (req, res, next) => {
     res.cookie('jwt', token, {
       maxAge: 24 * 60 * 60 * 1000 * 7,
       httpOnly: true,
-      sameSite: true,
     });
     res.status(200).send(user.passwordPrivate());
   } catch (e) {
